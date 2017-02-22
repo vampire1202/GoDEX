@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8BC634CE-D9B9-4405-8ED5-411CCF0C92C5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Maticsoft.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Matisoft.Common.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maticsoft.Common.DEncrypt\DEncrypt.cs" />
+    <Compile Include="Maticsoft.Common.DEncrypt\DESEncrypt.cs" />
+    <Compile Include="Maticsoft.Common.DEncrypt\HashEncode.cs" />
+    <Compile Include="Maticsoft.Common.DEncrypt\RSACryption.cs" />
+    <Compile Include="Maticsoft.Common.Mail\ConnectCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\ConnectResponse.cs" />
+    <Compile Include="Maticsoft.Common.Mail\DeleCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\ListCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\ListResponse.cs" />
+    <Compile Include="Maticsoft.Common.Mail\MailHeaders.cs" />
+    <Compile Include="Maticsoft.Common.Mail\MailMessageEx.cs" />
+    <Compile Include="Maticsoft.Common.Mail\NoopCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\PassCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Client.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Command.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Commands.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Exception.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3ListItem.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Response.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3Responses.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Pop3State.cs" />
+    <Compile Include="Maticsoft.Common.Mail\QuitCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\RetrCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\RetrResponse.cs" />
+    <Compile Include="Maticsoft.Common.Mail\RsetCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\Stat.cs" />
+    <Compile Include="Maticsoft.Common.Mail\StatCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\StatResponse.cs" />
+    <Compile Include="Maticsoft.Common.Mail\TopCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mail\UserCommand.cs" />
+    <Compile Include="Maticsoft.Common.Mime\MediaTypes.cs" />
+    <Compile Include="Maticsoft.Common.Mime\MimeEntity.cs" />
+    <Compile Include="Maticsoft.Common.Mime\MimeHeaders.cs" />
+    <Compile Include="Maticsoft.Common.Mime\MimeReader.cs" />
+    <Compile Include="Maticsoft.Common.Mime\QuotedPrintableEncoding.cs" />
+    <Compile Include="Maticsoft.Common\Config.cs" />
+    <Compile Include="Maticsoft.Common\ConfigHelper.cs" />
+    <Compile Include="Maticsoft.Common\DataCache.cs" />
+    <Compile Include="Maticsoft.Common\DataConversion.cs" />
+    <Compile Include="Maticsoft.Common\DataSetTool.cs" />
+    <Compile Include="Maticsoft.Common\DownloadEventArgs.cs" />
+    <Compile Include="Maticsoft.Common\EnumFormula.cs" />
+    <Compile Include="Maticsoft.Common\FormulaCalculator.cs" />
+    <Compile Include="Maticsoft.Common\FormulaDeal.cs" />
+    <Compile Include="Maticsoft.Common\INIFile.cs" />
+    <Compile Include="Maticsoft.Common\MailPoper.cs" />
+    <Compile Include="Maticsoft.Common\MailSender.cs" />
+    <Compile Include="Maticsoft.Common\MessageBox.cs" />
+    <Compile Include="Maticsoft.Common\MultipartForm.cs" />
+    <Compile Include="Maticsoft.Common\PageValidate.cs" />
+    <Compile Include="Maticsoft.Common\Pagination.cs" />
+    <Compile Include="Maticsoft.Common\PopConfig.cs" />
+    <Compile Include="Maticsoft.Common\PopSetting.cs" />
+    <Compile Include="Maticsoft.Common\Rmb.cs" />
+    <Compile Include="Maticsoft.Common\SetXColumnHandler.cs" />
+    <Compile Include="Maticsoft.Common\SmtpConfig.cs" />
+    <Compile Include="Maticsoft.Common\SmtpSetting.cs" />
+    <Compile Include="Maticsoft.Common\StringPlus.cs" />
+    <Compile Include="Maticsoft.Common\TimeParser.cs" />
+    <Compile Include="Maticsoft.Common\UploadEventArgs.cs" />
+    <Compile Include="Maticsoft.Common\UrlOper.cs" />
+    <Compile Include="Maticsoft.Common\WebClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Matisoft.Common.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

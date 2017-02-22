@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="button1.Text" xml:space="preserve">
+    <value>&amp;Fertig</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Rotationswinkel:</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Punkt aus Karte holen...</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Rotationspunkt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAADAAADAAAAAwMAAwAAAAMAAwADAwAAAwMDAAMDcwADwyKQAAACAAACAAAAAgIAAgAAAAIAA
+        gACAgAAAqr30AKrP9ACq4vQAqvT0AKr04gCq9M8AqvS9AKr0qgC99KoAz/SqAOL0qgD09KoA9OKqAPTP
+        qgD0vaoA9KqqAPSqvQD0qs8A9KriAPSq9ADiqvQAz6r0AL2q9ACtq/MAhZ/vAIW67wCF1e8Ahe/vAIXv
+        1QCF77oAhe+fAIXvhQCf74UAuu+FANXvhQDv74UA79WFAO+6hQDvn4UA74WFAO+FnwDvhboA74XVAO+F
+        7wDVhe8AuoXvAJ+F7wCIhu4AYIPqAGCl6gBgyOoAYOrqAGDqyABg6qUAYOqDAGDqYACD6mAApepgAMjq
+        YADq6mAA6shgAOqlYADqg2AA6mBgAOpggwDqYKUA6mDIAOpg6gDIYOoApWDqAINg6gBkYekAOmXkADqP
+        5AA6uuQAOuTkADrkugA65I8AOuRlADrkOgBl5DoAj+Q6ALrkOgDk5DoA5Lo6AOSPOgDkZToA5Do6AOQ6
+        ZQDkOo8A5Dq6AOQ65AC6OuQAjzrkAGU65ABAPOMAHk3XAB561wAeqdcAHtfXAB7XqQAe13oAHtdNAE3X
+        HgB61x4AqdceANfXHgDXqR4A13oeANdNHgDXHh4A1x5NANceegDXHqkA1x7XAKke1wB6HtcATR7XACMf
+        1gAaQLAAGGWxABiLsQAYsbEAGLGLABixZQAYsT8AP7EYAGWxGACLsRgAsbEYALGLGACxZRgAsT8YALEY
+        GACxGD8AsRhlALEYiwCxGLEAixixAGUYsQA/GLEAHhqwABQyiwATUIwAE2+MABOMjAATjG8AE4xQABOM
+        MgATjBMAUIwTAG+MEwCMjBMAjG8TAIxQEwCMMhMAjBMyAIwTUACME28AjBOMAG8TjABQE4wAMhOMABcU
+        iwAPJWYADlFnAA5nZwAOZ1EADmc6AA5nJAAkZw4AUWcOAGdnDgBnUQ4AZzoOAGckDgBnDjoAZw5RAGcO
+        ZwBRDmcAOg5nADAwMABHR0cAX19fAHd3dwCPj48Ap6enAL6+vgDW1tYA7u7uANDb+QDQ5PkA0O/5AND5
+        +QDQ+e8A0PnkAND52wDQ+dAA2/nQAOT50ADv+dAA+fnQAPnv0AD55NAA+dvQAPnQ0AD50NsA+dDkAPnQ
+        7wD50PkA79D5AOTQ+QDb0PkA0dD5AOLq/ADi7/wA4vX8AOL8/ADi/PUA4vzvAPD7/wCkoKAAgICAAAAA
+        /wAA/wAAAP//AP8AAAD/AP8A//8AAP///wDw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAPAAAAAAAAAAAAAA
+        AADw8PDw8PDwAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAAAAAADwAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD+fwAA8Y8AAO/3AADv9wAA7/cAAN/7AADf+wAA7/cAAO/X
+        AADvtwAAAQ8AAO4fAADvPwAA798AAP//AAA=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Shape drehen</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>&amp;Rotieren</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Bitte wählen wie das Shape gedreht werden soll. Der Rotationspunkt wird blau dargestellt.</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>(auch negative angaben)</value>
+  </data>
+  <data name="rdCentroid.Text" xml:space="preserve">
+    <value>Um Mittelpunkt drehen</value>
+  </data>
+  <data name="rdOther.Text" xml:space="preserve">
+    <value>Um anderen Punkt drehen:</value>
+  </data>
+  <data name="txtAngle.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+</root>

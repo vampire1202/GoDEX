@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98695DAA-CDB7-4175-91D7-3FB0EDEB303B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoDEX</RootNamespace>
+    <AssemblyName>GoDEX</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\main.png" />
+    <Content Include="images\node.png" />
+    <Content Include="laydate\laydate.js" />
+    <Content Include="laydate\need\laydate.css" />
+    <Content Include="laydate\skins\dahong\icon.png" />
+    <Content Include="laydate\skins\dahong\laydate.css" />
+    <Content Include="laydate\skins\danlan\icon.png" />
+    <Content Include="laydate\skins\danlan\laydate.css" />
+    <Content Include="laydate\skins\default\icon.png" />
+    <Content Include="laydate\skins\default\laydate.css" />
+    <Content Include="laydate\skins\qianhuang\icon.png" />
+    <Content Include="laydate\skins\qianhuang\laydate.css" />
+    <Content Include="laydate\skins\yahui\icon.png" />
+    <Content Include="laydate\skins\yahui\laydate.css" />
+    <Content Include="laydate\skins\yalan\icon.png" />
+    <Content Include="laydate\skins\yalan\laydate.css" />
+    <Content Include="NodeInfo.aspx" />
+    <Content Include="Site.Master" />
+    <None Include="Properties\PublishProfiles\godexWeb.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\select.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Curve.aspx" />
+    <Content Include="DataServerSet.aspx" />
+    <Content Include="editor\kindeditor.js" />
+    <Content Include="editor\plugins\about.html" />
+    <Content Include="editor\plugins\emoticons\etc_01.gif" />
+    <Content Include="editor\plugins\emoticons\etc_02.gif" />
+    <Content Include="editor\plugins\emoticons\etc_03.gif" />
+    <Content Include="editor\plugins\emoticons\etc_04.gif" />
+    <Content Include="editor\plugins\emoticons\etc_05.gif" />
+    <Content Include="editor\plugins\emoticons\etc_06.gif" />
+    <Content Include="editor\plugins\emoticons\etc_07.gif" />
+    <Content Include="editor\plugins\emoticons\etc_08.gif" />
+    <Content Include="editor\plugins\emoticons\etc_09.gif" />
+    <Content Include="editor\plugins\emoticons\etc_10.gif" />
+    <Content Include="editor\plugins\emoticons\etc_11.gif" />
+    <Content Include="editor\plugins\emoticons\etc_12.gif" />
+    <Content Include="editor\plugins\emoticons\etc_13.gif" />
+    <Content Include="editor\plugins\emoticons\etc_14.gif" />
+    <Content Include="editor\plugins\emoticons\etc_15.gif" />
+    <Content Include="editor\plugins\emoticons\etc_16.gif" />
+    <Content Include="editor\plugins\emoticons\etc_17.gif" />
+    <Content Include="editor\plugins\emoticons\etc_18.gif" />
+    <Content Include="editor\plugins\emoticons\etc_19.gif" />
+    <Content Include="editor\plugins\emoticons\etc_20.gif" />
+    <Content Include="editor\plugins\emoticons\etc_21.gif" />
+    <Content Include="editor\plugins\emoticons\etc_22.gif" />
+    <Content Include="editor\plugins\emoticons\etc_23.gif" />
+    <Content Include="editor\plugins\emoticons\etc_24.gif" />
+    <Content Include="editor\plugins\emoticons\etc_25.gif" />
+    <Content Include="editor\plugins\emoticons\etc_26.gif" />
+    <Content Include="editor\plugins\emoticons\etc_27.gif" />
+    <Content Include="editor\plugins\emoticons\etc_28.gif" />
+    <Content Include="editor\plugins\emoticons\etc_29.gif" />
+    <Content Include="editor\plugins\emoticons\etc_30.gif" />
+    <Content Include="editor\plugins\emoticons\etc_31.gif" />
+    <Content Include="editor\plugins\emoticons\etc_32.gif" />
+    <Content Include="editor\plugins\emoticons\etc_33.gif" />
+    <Content Include="editor\plugins\emoticons\etc_34.gif" />
+    <Content Include="editor\plugins\emoticons\etc_35.gif" />
+    <Content Include="editor\plugins\emoticons\etc_36.gif" />
+    <Content Include="editor\plugins\flash.html" />
+    <Content Include="editor\plugins\image.html" />
+    <Content Include="editor\plugins\link.html" />
+    <Content Include="editor\plugins\media.html" />
+    <Content Include="editor\plugins\plainpaste.html" />
+    <Content Include="editor\plugins\remote_image.html" />
+    <Content Include="editor\plugins\wordpaste.html" />
+    <Content Include="editor\skins\default.css" />
+    <Content Include="editor\skins\default.gif" />
+    <Content Include="editor\skins\div.gif" />
+    <Content Include="editor\skins\dl.gif" />
+    <Content Include="editor\skins\editor.css" />
+    <Content Include="editor\skins\ol.gif" />
+    <Content Include="editor\skins\p.gif" />
+    <Content Include="editor\skins\tinymce.css" />
+    <Content Include="editor\skins\tinymce.gif" />
+    <Content Include="editor\skins\ul.gif" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\001.jpg" />
+    <Content Include="images\404.png" />
+    <Content Include="images\add.png" />
+    <Content Include="images\btnbg.png" />
+    <Content Include="images\btnbg1.png" />
+    <Content Include="images\btnbg2.png" />
+    <Content Include="images\buttonbg.png" />
+    <Content Include="images\c01.png" />
+    <Content Include="images\c02.png" />
+    <Content Include="images\c03.png" />
+    <Content Include="images\cbg.png" />
+    <Content Include="images\clist.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\close1.png" />
+    <Content Include="images\cloud.png" />
+    <Content Include="images\d01.png" />
+    <Content Include="images\d02.png" />
+    <Content Include="images\d03.png" />
+    <Content Include="images\d04.png" />
+    <Content Include="images\d05.png" />
+    <Content Include="images\d06.png" />
+    <Content Include="images\d07.png" />
+    <Content Include="images\diskbg.png" />
+    <Content Include="images\dp.png" />
+    <Content Include="images\f01.png" />
+    <Content Include="images\f02.png" />
+    <Content Include="images\f03.png" />
+    <Content Include="images\f04.png" />
+    <Content Include="images\f05.png" />
+    <Content Include="images\f06.png" />
+    <Content Include="images\help.png" />
+    <Content Include="images\i01.png" />
+    <Content Include="images\i02.png" />
+    <Content Include="images\i03.png" />
+    <Content Include="images\i04.png" />
+    <Content Include="images\i05.png" />
+    <Content Include="images\i06.png" />
+    <Content Include="images\i07.png" />
+    <Content Include="images\i08.png" />
+    <Content Include="images\i09.png" />
+    <Content Include="images\iadd.png" />
+    <Content Include="images\ibtnbg.png" />
+    <Content Include="images\ico01.png" />
+    <Content Include="images\ico02.png" />
+    <Content Include="images\ico03.png" />
+    <Content Include="images\ico04.png" />
+    <Content Include="images\ico05.png" />
+    <Content Include="images\ico06.png" />
+    <Content Include="images\icon01.png" />
+    <Content Include="images\icon02.png" />
+    <Content Include="images\icon03.png" />
+    <Content Include="images\icon04.png" />
+    <Content Include="images\icon05.png" />
+    <Content Include="images\icon06.png" />
+    <Content Include="images\img01.png" />
+    <Content Include="images\img02.png" />
+    <Content Include="images\img03.png" />
+    <Content Include="images\img04.png" />
+    <Content Include="images\img05.png" />
+    <Content Include="images\img06.png" />
+    <Content Include="images\img07.png" />
+    <Content Include="images\img08.png" />
+    <Content Include="images\img09.png" />
+    <Content Include="images\img10.png" />
+    <Content Include="images\img11.png" />
+    <Content Include="images\img12.png" />
+    <Content Include="images\img13.png" />
+    <Content Include="images\img14.png" />
+    <Content Include="images\img15.png" />
+    <Content Include="images\inputbg.gif" />
+    <Content Include="images\itabbg.png" />
+    <Content Include="images\itabbg1.png" />
+    <Content Include="images\leftico.png" />
+    <Content Include="images\leftico01.png" />
+    <Content Include="images\leftico02.png" />
+    <Content Include="images\leftico03.png" />
+    <Content Include="images\leftico04.png" />
+    <Content Include="images\leftline.gif" />
+    <Content Include="images\leftmenubg.gif" />
+    <Content Include="images\lefttop.gif" />
+    <Content Include="images\libg.png" />
+    <Content Include="images\light.png" />
+    <Content Include="images\line.gif" />
+    <Content Include="images\line1.png" />
+    <Content Include="images\list.gif" />
+    <Content Include="images\list1.gif" />
+    <Content Include="images\list2.png" />
+    <Content Include="images\loginbg1.png" />
+    <Content Include="images\loginbg2.png" />
+    <Content Include="images\loginbg3.png" />
+    <Content Include="images\logininfo.png" />
+    <Content Include="images\loginlogo.png" />
+    <Content Include="images\loginpassword.png" />
+    <Content Include="images\loginsj.png" />
+    <Content Include="images\loginuser.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\msg.png" />
+    <Content Include="images\navbg.png" />
+    <Content Include="images\next.gif" />
+    <Content Include="images\pre.gif" />
+    <Content Include="images\px.gif" />
+    <Content Include="images\righttop.gif" />
+    <Content Include="images\rlist.gif" />
+    <Content Include="images\search.png" />
+    <Content Include="images\sj.png" />
+    <Content Include="images\sun.png" />
+    <Content Include="images\t01.png" />
+    <Content Include="images\t02.png" />
+    <Content Include="images\t03.png" />
+    <Content Include="images\t04.png" />
+    <Content Include="images\t05.png" />
+    <Content Include="images\tbg.png" />
+    <Content Include="images\tcbg.gif" />
+    <Content Include="images\th.gif" />
+    <Content Include="images\ticon.png" />
+    <Content Include="images\time.png" />
+    <Content Include="images\toolbg.gif" />
+    <Content Include="images\topbg.gif" />
+    <Content Include="images\topleft.jpg" />
+    <Content Include="images\topright.jpg" />
+    <Content Include="images\ub1.png" />
+    <Content Include="images\uew_icon.png" />
+    <Content Include="images\uew_icon_hover.png" />
+    <Content Include="images\ulist.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\userbg.png" />
+    <Content Include="js\cloud.js" />
+    <Content Include="js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="js\jquery.ba-resize.min.js" />
+    <Content Include="js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="js\jquery.idTabs.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jsapi.js" />
+    <Content Include="js\PIE.htc" />
+    <Content Include="js\select-ui.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Monitor.aspx" />
+    <Content Include="Nodes.aspx" />
+    <Content Include="Report.aspx" />
+    <Content Include="SysSet.aspx" />
+    <Content Include="UControl\Node.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Curve.aspx.cs">
+      <DependentUpon>Curve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Curve.aspx.designer.cs">
+      <DependentUpon>Curve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataServerSet.aspx.cs">
+      <DependentUpon>DataServerSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataServerSet.aspx.designer.cs">
+      <DependentUpon>DataServerSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor.aspx.cs">
+      <DependentUpon>Monitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor.aspx.designer.cs">
+      <DependentUpon>Monitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NodeInfo.aspx.cs">
+      <DependentUpon>NodeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NodeInfo.aspx.designer.cs">
+      <DependentUpon>NodeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes.aspx.cs">
+      <DependentUpon>Nodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nodes.aspx.designer.cs">
+      <DependentUpon>Nodes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RWconfig.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SysSet.aspx.cs">
+      <DependentUpon>SysSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSet.aspx.designer.cs">
+      <DependentUpon>SysSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\Node.ascx.cs">
+      <DependentUpon>Node.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UControl\Node.ascx.designer.cs">
+      <DependentUpon>Node.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9fe00521-3a8b-42b1-814e-585e99407b2e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6719</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6719/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

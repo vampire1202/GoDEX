@@ -1,0 +1,26 @@
+﻿<UserControl xmlns:GoDexWPFB="clr-namespace:GoDexWPFB"  x:Class="GoDexWPFB.Nodes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024" Loaded="UserControl_Loaded">
+    <Grid Background="AliceBlue">
+        <ItemsControl  x:Name="itemsControl"  Background="AliceBlue">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Name="nodePanel" Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="1">
+                        <WrapPanel>
+                            <GoDexWPFB:c_node />
+                        </WrapPanel>                        
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl> 
+    </Grid>
+</UserControl>

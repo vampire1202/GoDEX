@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ShapefileEditor</name>
+    </assembly>
+    <members>
+        <member name="T:ShapefileEditor.AddShapefileForm">
+            <summary>
+            Summary description for AddShapefileForm.
+            </summary>
+        </member>
+        <member name="F:ShapefileEditor.AddShapefileForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapefileForm.#ctor">
+            <summary>
+            The AddShapefileForm prompts the end-user for information needed to create a new shapefile.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapefileForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapefileForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ShapefileEditor.AddShapeForm">
+            <summary>
+            Summary description for AddShapeForm.
+            </summary>
+        </member>
+        <member name="F:ShapefileEditor.AddShapeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.#ctor(MapWinGIS.ShpfileType,ShapefileEditor.ShapefileEditorClass.FormClosedDelegate)">
+            <summary>
+            Constructor.
+            The AddShapeForm is used when creating a new shape.  
+            The user can either click on the map to generate new points, lines or polygons, or input coordinates in the text boxes provided on the form.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.ValidateText">
+            <summary>
+            Makes sure that the text input boxes only contain numeric characters.
+            </summary>
+            <returns>Returns true if the text boxes contain only numeric characters, fasle otherwise.</returns>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.btnAddPoint_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for the Add Point button.
+            </summary>
+            <param name="sender">The object that created the event.</param>
+            <param name="e">Button click parameters.</param>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.txtX_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Event handler for the X coordinte text box.
+            If an invalid character is entered, the event handler does not accept it.
+            The event handler also enables/disables the Add Point button.
+            </summary>
+            <param name="sender">The object that generated the event.</param>
+            <param name="e">Textbox KeyPress event parameters</param>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.txtY_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Event handler for the Y coordinate text box.
+            If an invalid character is entered, the event handler does not accept it.
+            The event handler also enables/disables the Add Point button.
+            </summary>
+            <param name="sender">The object that generated the event.</param>
+            <param name="e">Textbox KeyPress event parameters</param>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.AddPoint(System.Double,System.Double)">
+            <summary>
+            Adds a point to the current shape.  If a shape is not yet initialized, it will initialize it.
+            </summary>
+            <param name="x">X coordinate in projected coordinates.</param>
+            <param name="y">Y coordinate in projected coordinates.</param>
+        </member>
+        <member name="M:ShapefileEditor.AddShapeForm.AddShapeForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Event that occurs when the AddShapeForm is closing.  I generate the return value here.
+            </summary>
+            <param name="sender">The object causing the close event.</param>
+            <param name="e">Event data.</param>
+        </member>
+        <member name="P:ShapefileEditor.AddShapeForm.GetNewShape">
+            <summary>
+            Returns the shape input by the user as a MapWinGIS.Shape.  If the user has not finished defining the shape, the value will be null.
+            </summary>
+        </member>
+        <member name="T:ShapefileEditor.PointD">
+            <summary>
+            Summary description for PointD.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.PointD.#ctor(System.Double,System.Double)">
+            <summary>
+            PointD constructor.
+            </summary>
+            <param name="x">x value</param>
+            <param name="y">y value</param>
+        </member>
+        <member name="M:ShapefileEditor.PointD.Dist(ShapefileEditor.PointD)">
+            <summary>
+            Calculates the distance between this point and pt2.
+            </summary>
+            <param name="pt2">The second point.</param>
+            <returns>Returns the distance between this point and pt2.</returns>
+        </member>
+        <member name="M:ShapefileEditor.PointD.Dist(System.Double,System.Double)">
+            <summary>
+            Calculates the distance between this point and the coordinates given
+            </summary>
+            <param name="x">x coordinate.</param>
+            <param name="y">y coordinate.</param>
+            <returns>Returns the distance between this point and (x, y).</returns>
+        </member>
+        <member name="M:ShapefileEditor.PointD.Dist(ShapefileEditor.PointD,ShapefileEditor.PointD)">
+            <summary>
+            Calculates the distance between two points.
+            </summary>
+            <param name="pt1">Point 1.</param>
+            <param name="pt2">Point 2.</param>
+            <returns>Returns the distance between pt1 and pt2.</returns>
+        </member>
+        <member name="M:ShapefileEditor.PointD.Dist(ShapefileEditor.PointD,System.Double,System.Double)">
+            <summary>
+            Calculates the distance between two points.
+            </summary>
+            <param name="pt1">Point 1</param>
+            <param name="x2">x2 coordinate.</param>
+            <param name="y2">y2 coordinate.</param>
+            <returns>The distance between pt1 and (x2, y2).</returns>
+        </member>
+        <member name="M:ShapefileEditor.PointD.Dist(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Calcluates the distance between two points.
+            </summary>
+            <param name="x1">x1 coordinate.</param>
+            <param name="y1">y1 coordinate.</param>
+            <param name="x2">x2 coordinate.</param>
+            <param name="y2">y2 coordinate.</param>
+            <returns>Returns the distance between the two points.</returns>
+        </member>
+        <member name="P:ShapefileEditor.PointD.x">
+            <summary>
+            x value
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.PointD.y">
+            <summary>
+            y value
+            </summary>
+        </member>
+        <member name="T:ShapefileEditor.ShapeClass">
+            <summary>
+            Summary description for ShapeClass.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapeClass.#ctor">
+            <summary>
+            Constructor for the ShapeClass object.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapeClass.AddPoint(ShapefileEditor.PointD)">
+            <summary>
+            Adds a point to this shape.
+            </summary>
+            <param name="p">System.Drawing.Point to add.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapeClass.RemovePoint(System.Drawing.Point)">
+            <summary>
+            Removes a point from this shape.
+            </summary>
+            <param name="p">System.Drawing.Point to remove.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapeClass.RemovePoint(System.Int32)">
+            <summary>
+            Removes a point from this shape.
+            </summary>
+            <param name="Index">Index in the list to remove.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapeClass.ToMWShape">
+            <summary>
+            Creates a MapWinGIS.Shape object from the point data specified by the user.
+            </summary>
+            <returns>Returns a MapWinGIS.Shape object.</returns>
+        </member>
+        <member name="P:ShapefileEditor.ShapeClass.Item(System.Int32)">
+            <summary>
+            Indexed access to all points.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapeClass.NumPoints">
+            <summary>
+            Returns the number of points that have been added to the shape.
+            </summary>
+        </member>
+        <member name="T:ShapefileEditor.ShapefileEditorClass">
+            <summary>
+            Summary description for ShapefileEditorClass.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.#ctor">
+            <summary>
+            The ShapefileEditorClass implements the MapWindow.Interfaces.IPlugin interface.  This class handles all the direct interaction with the MapWindow.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.ProjectLoading(System.String,System.String)">
+            <summary>
+            Called when the MapWindow loads a new project.
+            </summary>
+            <param name="ProjectFile">The filename of the project file being loaded.</param>
+            <param name="SettingsString">The settings string that was saved in the project file for this plugin.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.Message(System.String,System.Boolean@)">
+            <summary>
+            Method used by plugins to communicate with other plugins.
+            </summary>
+            <param name="msg">The messsage being recieved.</param>
+            <param name="Handled">Reference parameter.  Set thist to true if this plugin handles recieving the message.  When set to true, no other plugins will receive the message.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.MapExtentsChanged">
+            <summary>
+            Method that is called when the MapWindow extents change.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.Terminate">
+            <summary>
+            This method is called when a plugin is unloaded.  The plugin should remove all toolbars, buttons and menus that it added.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.MapMouseDown(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            Occurs when the user presses a mouse button on the MapWindow map display.
+            </summary>
+            <param name="Button">The integer representation of the button pressed by the user.  This parameter uses the vb6 mouse button constants (vbLeftButton, etc.).</param>
+            <param name="Shift">The integer representation of which shift/alt/control keys are pressed. This parameter uses the vb6 shift constants.</param>
+            <param name="x">X coordinate in pixels.</param>
+            <param name="y">Y coordinate in pixels.</param>
+            <param name="Handled">Reference parameter.  When set to true, no other plugins will receive this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.ProjectSaving(System.String,System.String@)">
+            <summary>
+            ProjectSaving is called when the MapWindow saves a project.  This is a good chance for the plugin to save any custom settings and create a SettingsString to place in the project file.
+            </summary>
+            <param name="ProjectFile">The name of the project file being saved.</param>
+            <param name="SettingsString">Reference parameter.  The settings string that will be saved in the project file for this plugin.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.ItemClicked(System.String,System.Boolean@)">
+            <summary>
+            Occurs when a user clicks on a toolbar button or menu item.
+            </summary>
+            <param name="ItemName">The name of the item clicked on.</param>
+            <param name="Handled">Reference parameter.  Setting Handled to true prevents other plugins from receiving this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LayersAdded(MapWindow.Interfaces.Layer[])">
+            <summary>
+            Called when 1 or more layers are added to the MapWindow.
+            </summary>
+            <param name="Layers">Array of layer objects containing references to all layers added.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LayerSelected(System.Int32)">
+            <summary>
+            Called when a layer is selected or made to be the active layer.
+            </summary>
+            <param name="Handle">The layer handle of the newly selected layer.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.MapDragFinished(System.Drawing.Rectangle,System.Boolean@)">
+            <summary>
+            Occurs after a user selects a rectangular area in the MapWindow.  Normally this implies selection.
+            </summary>
+            <param name="Bounds">The rectangle selected.</param>
+            <param name="Handled">Reference parameter.  Setting Handled to true prevents other plugins from receiving this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.Initialize(MapWindow.Interfaces.IMapWin,System.Int32)">
+            <summary>
+            This event is called when a plugin is loaded or turned on in the MapWindow.
+            </summary>
+            <param name="MapWin">The interface to use to access the MapWindow.</param>
+            <param name="ParentHandle">The window handle of the MapWindow form.  This handle is useful for making the MapWindow the owner of plugin forms.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.MapMouseUp(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            Occurs when a user releases a mouse button on the MapWindow main map display.
+            </summary>
+            <param name="Button">An integer representation of which button(s) were released.  Uses vb6 button constants.</param>
+            <param name="Shift">An integer representation of the shift/alt/ctrl keys that were pressed at the time the mouse button was released.  Uses vb6 shift constants.</param>
+            <param name="x">X coordinate in pixels.</param>
+            <param name="y">Y coordinate in pixels.</param>
+            <param name="Handled">Reference parameter.  Prevents other plugins from getting this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LegendDoubleClick(System.Int32,MapWindow.Interfaces.ClickLocation,System.Boolean@)">
+            <summary>
+            Occurs when a user double clicks on the legend.
+            </summary>
+            <param name="Handle">The handle of the legend group or item that was clicked on.</param>
+            <param name="Location">Enumerated.  The location clicked on.</param>
+            <param name="Handled">Reference parameter.  When set to true it prevents additional plugins from getting this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LegendMouseDown(System.Int32,System.Int32,MapWindow.Interfaces.ClickLocation,System.Boolean@)">
+            <summary>
+            Occurs when a user presses a mouse button on the legend.
+            </summary>
+            <param name="Handle">Layer or group handle that was clicked.</param>
+            <param name="Button">The integer representation of the button used.  Uses vb6 mouse button constants.</param>
+            <param name="Location">The part of the legend that was clicked.</param>
+            <param name="Handled">Reference parameter.  Prevents other plugins from getting this event when set to true.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LegendMouseUp(System.Int32,System.Int32,MapWindow.Interfaces.ClickLocation,System.Boolean@)">
+            <summary>
+            Occurs when the user releases a mouse button over the legend.
+            </summary>
+            <param name="Handle">The handle of the group or layer.</param>
+            <param name="Button">The integer representation of the button released.  Uses vb6 button constants.</param>
+            <param name="Location">Enumeration.  Specifies if a group, layer or neither was clicked on.</param>
+            <param name="Handled">Reference parameter.  Prevents other plugins from getting this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LayerRemoved(System.Int32)">
+            <summary>
+            Occurs when a layer is removed from the MapWindow.
+            </summary>
+            <param name="Handle">The handle of the layer being removed.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.MapMouseMove(System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            Occurs when a user moves the mouse over the MapWindow main display.
+            </summary>
+            <param name="ScreenX">X coordinate in pixels.</param>
+            <param name="ScreenY">Y coordinate in pixels.</param>
+            <param name="Handled">Reference parameter.  Prevents other plugins from getting this event.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.LayersCleared">
+            <summary>
+            Occurs when the "Clear all layers" button is pressed in the MapWindow.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.ShapesSelected(System.Int32,MapWindow.Interfaces.SelectInfo)">
+            <summary>
+            Occurs when shapes have been selected in the MapWindow.
+            </summary>
+            <param name="Handle">The handle of the layer that was selected on.</param>
+            <param name="SelectInfo">Information about all the shapes that were selected.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.DoEnables">
+            <summary>
+            Enables or disables toolbar buttons and menu items depending on the state of the MapWindow.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.AddNewShapefile">
+            <summary>
+            Prompts the user for information needed to create a new shapefile, then creates it.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.SetCursor">
+            <summary>
+            Sets the current map cursor depending on the state of the ShapefileEditor plugin.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.AddNewShape">
+            <summary>
+            Helper function to add a new shape.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.UpdateButtons(System.String)">
+            <summary>
+            Makes sure that only one button is toggled at any given time.
+            </summary>
+            <param name="PressedButtonName">The name of the button that should be pressed currently.</param>
+        </member>
+        <member name="M:ShapefileEditor.ShapefileEditorClass.GetTolerance">
+            <summary>
+            Calculates the tolerance radius used for snapping.
+            </summary>
+            <returns>Returns the distance in map units of the tolerance radius</returns>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.BuildDate">
+            <summary>
+            Date that the plugin was built.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.Description">
+            <summary>
+            Description of the plugin.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.Author">
+            <summary>
+            Author of the plugin.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.Name">
+            <summary>
+            Name of the plugin.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.Version">
+            <summary>
+            Version of the plugin.
+            </summary>
+        </member>
+        <member name="P:ShapefileEditor.ShapefileEditorClass.SerialNumber">
+            <summary>
+            Serial number of the plugin.
+            The serial number and the name are tied together.  For each name there is a corresponding serial number.
+            </summary>
+        </member>
+        <member name="T:ShapefileEditor.SnapClass">
+            <summary>
+            Summary description for SnapClass.
+            </summary>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.#ctor(MapWinGIS.Shapefile)">
+            <summary>
+            Constructor.
+            Bulds a snap list from a MapWinGIS.Shapefile.
+            </summary>
+            <param name="sf">MapWinGIS.Shapefile used to create the list of points to snap on.</param>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.CanSnap(System.Double,System.Double,System.Double,ShapefileEditor.PointD@)">
+            <summary>
+            Finds the nearest point to the requested location that is within the tolerance radius.
+            </summary>
+            <param name="ProjectedRadius">The tolerance radius in projected units used to search for the nearest point that can be snapped to. </param>
+            <param name="x">x coordinate in projected map units</param>
+            <param name="y">y coordinate in projected map units</param>
+            <param name="BestPoint">A PointD class with the location of the nearest point to snap to if there is are any within the tolerance, null if no points are found.</param>
+            <returns>Returns true if there is a point to snap to.</returns>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.CanSnap(System.Double,System.Double,System.Double,ShapefileEditor.ShapeClass,ShapefileEditor.PointD@)">
+            <summary>
+            Finds the nearest point to the requested location that is within the tolerance radius.
+            </summary>
+            <param name="ProjectedRadius">The tolerance radius in projected units used to search for the nearest point that can be snapped to.</param>
+            <param name="x">x coordinate in projected map units</param>
+            <param name="y">y coordinate in projected map units</param>
+            <param name="curShape">The shape that is currently being created.  Points from this shape are also checked.</param>
+            <param name="BestPoint">A PointD class with the location of the nearest point to snap to if there is are any within the tolerance, null if no points are found.</param>
+            <returns>Returns true if there is a point to snap to.</returns>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.FindFirst(System.Collections.SortedList,System.Double)">
+            <summary>
+            Finds the first key in the sorted list that is >= val
+            </summary>
+            <param name="lst">Sorted list of values.</param>
+            <param name="val">Key value to search for.</param>
+            <returns>Returns the first index of an item with a key >= val. If none are found -1 is returned.</returns>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.AddShapeData(ShapefileEditor.ShapeClass)">
+            <summary>
+            Adds new points to the SnapClass' point index.
+            </summary>
+            <param name="newShape">The shape containing data to add to the points index.</param>
+        </member>
+        <member name="M:ShapefileEditor.SnapClass.AddShapeData(MapWinGIS.Shape)">
+            <summary>
+            Adds new points to the SnapClass' point index.
+            </summary>
+            <param name="newShape">The shape containing data to add to the points index.</param>
+        </member>
+    </members>
+</doc>

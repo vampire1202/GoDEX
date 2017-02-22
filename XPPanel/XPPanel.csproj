@@ -1,0 +1,199 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B656A5B-3371-461B-86BA-61F5EA96DBB2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>XPPanel</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UIComponents</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\XPPanel.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseColorCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorEditors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorTypeConverters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExtendedColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GradientColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HSLColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageCollectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageMapEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImagePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageSetTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ItemLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundedRect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StateImageItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextElementTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UITypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XPPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPPanelGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPPanelTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="ImagePanel.resx">
+      <DependentUpon>ImagePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageSet.resx">
+      <DependentUpon>ImageSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemLayoutPanel.resx">
+      <DependentUpon>ItemLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextLayoutPanel.resx">
+      <DependentUpon>TextLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xp.style.glyphs.png" />
+    <EmbeddedResource Include="XPPanel.resx">
+      <DependentUpon>XPPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPPanelGroup.resx">
+      <DependentUpon>XPPanelGroup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

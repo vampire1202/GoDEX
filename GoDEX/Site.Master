@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GoDex.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Go-DEX早期火警预警系统</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" /> 
+    <script lang="JavaScript" src="js/jquery.js"></script>
+    <%--    <script type="text/javascript">
+        $(function () {
+            //顶部导航切换
+            $(".nav li a").click(function () {
+                $(".nav li a.selected").removeClass("selected")
+                $(this).addClass("selected");
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(
+                function () {
+                    $(".menuson li.active").removeClass("active")
+                    $(this).addClass("active");
+                });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+        })
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #ffffff;">
+    <form id="form1" runat="server">
+        <%-- 顶部导航开始 --%>
+        <div style="height: 90px; background: url(images/topbg.gif) repeat-x;"">
+            <div class="topleft">
+                <a href="Home.aspx" target="_parent">
+                    <img src="images/logo.png" title="系统首页" /></a>
+            </div>
+            <ul class="nav">
+                <li>
+                    <asp:HyperLink ID="hrefHome" runat="server" NavigateUrl="~/Home.aspx" >
+                            <img src="images/icon01.png" title="首页" /><h2>首页</h2>
+                    </asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="hrefMonitor" runat="server" NavigateUrl="~/Monitor.aspx">
+                            <img src="images/icon02.png" title="在线监控" /><h2>在线监控</h2>
+                    </asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="hrefNodes" runat="server" NavigateUrl="~/Nodes.aspx">
+                            <img src="images/icon03.png" title="节点详情" /><h2>节点详情</h2>
+                    </asp:HyperLink> 
+                </li>
+                <li> <asp:HyperLink ID="hrefReport" runat="server" NavigateUrl="~/Report.aspx">
+                            <img src="images/icon04.png" title="查询报表" /><h2>查询报表</h2>
+                    </asp:HyperLink> </li>
+               <%-- <li><a href="Curve.aspx" id="hrefCurve">
+                    <img src="images/icon05.png" title="历史曲线" /><h2>历史曲线</h2>
+                </a></li>
+                <li><a href="SysSet.aspx" id="hrefSysset">
+                    <img src="images/icon06.png" title="系统设置" /><h2>系统设置</h2>
+                </a></li>--%>
+            </ul>
+            <div class="topright">
+                <ul>
+                    <li><span>
+                        <img src="images/help.png" title="帮助" class="helpimg" /></span><a href="#">帮助</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li>
+                        <asp:Button ID="btnExit" runat="server" Text="退出" BackColor="Transparent" ForeColor="White" OnClick="btnExit_Click"></asp:Button></li>
+                </ul>
+                   <div class="user">
+                      <span><img src="images/user.png"/> 欢迎您! </span><asp:Label ID="lblUserName" runat="server" Text="" ForeColor="Red"></asp:Label> 
+                    <i>身份:</i><asp:Label ID="lblRole" runat="server" Text="" ForeColor="Red" ></asp:Label> 
+                </div>
+            </div>
+        </div>
+        <%-- 顶部导航结束 --%>
+        <div class="lefttop">
+             <asp:Label ID="lblTitle" Width="500" runat="server" CssClass="lefttoplabel" Text=""></asp:Label>            
+        </div>
+       
+        <div style="margin: 0 auto; text-align: center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>
